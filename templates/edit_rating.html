@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Rating</title>
+</head>
+<body>
+    <form action="/edit/{{book.id}}" method="POST">
+        <p> Book Name: {{book.title}}</p>
+        <p> Current Rating: {{book.review}}</p>
+        <input hidden="hidden" name="id" value="{{book.id}}">
+        <input name="new_rating" placeholder="New Rating">
+        <button type="submit">Change Rating</button>
+    </form>
+</body>
+</html>
